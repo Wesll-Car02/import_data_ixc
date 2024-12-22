@@ -94,4 +94,4 @@ def inserir_cliente(
     
     # Mostra a resposta para debug
     print(response.status_code, response.reason)
-    print(response.text)
+    print(response.content)
