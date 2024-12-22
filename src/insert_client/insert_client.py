@@ -8,7 +8,7 @@ import os
 path_raiz = os.path.abspath(os.path.join(__file__, "../../.."))
 sys.path.append(path_raiz)
 
-from config.settings import BASE_URL, API_TOKEN
+from config.setting import BASE_URL, API_TOKEN
 
 def inserir_cliente(
     # Parâmetros com valores-padrão
@@ -46,7 +46,7 @@ def inserir_cliente(
     """
 
     host = BASE_URL
-    url = f"https://{host}/webservice/v1/cliente"
+    url = f"{host}/webservice/v1/cliente"
 
     # Gerando o token em Base64
     token = f"{API_TOKEN}".encode("utf-8")
@@ -91,7 +91,7 @@ def inserir_cliente(
 
     # Envia requisição
     response = requests.post(url, data=json.dumps(payload), headers=headers)
-    
+
     # Mostra a resposta para debug
     print(response.status_code, response.reason)
     print(response.content)

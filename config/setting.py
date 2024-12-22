@@ -1,8 +1,10 @@
 import os
 from dotenv import load_dotenv
 
-# Carrega variáveis de ambiente do .env
-load_dotenv()
+root_dir = os.path.abspath(os.path.join(__file__, "../../"))  # Ajustar se necessário
+env_file = os.path.join(root_dir, ".env")
+print("Carregando .env de:", env_file)
+load_dotenv(env_file, override=True)
 
 # Identifica o ambiente atual (padrão: "test")
 ENVIRONMENT = os.getenv("ENVIRONMENT", "test")
@@ -18,5 +20,5 @@ else:
 
 # Para debug
 print(f"Usando ambiente: {ENVIRONMENT}")
-# print(f"API_TOKEN: {API_TOKEN}")
-# print(f"BASE_URL: {BASE_URL}")
+print(f"API_TOKEN: {API_TOKEN}")
+print(f"BASE_URL: {BASE_URL}")
