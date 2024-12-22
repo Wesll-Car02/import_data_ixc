@@ -16,7 +16,7 @@ def inserir_cliente(
     id_tipo_cliente="",
     tipo_cliente_scm="01",
     pais="Brasil",
-    tipo_pessoa="F",
+    tipo_pessoa="",
     razao="",
     ie_identidade="",
     contribuinte_icms="N",
@@ -44,6 +44,12 @@ def inserir_cliente(
     Função para inserir um cliente via IXC API.
     Cada parâmetro do payload é opcional.
     """
+    # Se não foi passado explicitamente, decidimos aqui
+    if not tipo_pessoa:
+        if len(cnpj_cpf) == 11:
+            tipo_pessoa = "F"
+        else:
+            tipo_pessoa = "J"
 
     host = BASE_URL
     url = f"{host}/webservice/v1/cliente"
