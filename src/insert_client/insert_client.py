@@ -8,7 +8,7 @@ import os
 path_raiz = os.path.abspath(os.path.join(__file__, "../../.."))
 sys.path.append(path_raiz)
 
-from config.setting import BASE_URL, API_TOKEN
+from config.settings import BASE_URL, API_TOKEN
 
 def inserir_cliente(
     # Parâmetros com valores-padrão
@@ -95,3 +95,6 @@ def inserir_cliente(
     # Mostra a resposta para debug
     print(response.status_code, response.reason)
     print(response.content)
+    
+    # Retorna o objeto Response
+    return response

@@ -1,6 +1,6 @@
 import os
 
-ENVIRONMENT = os.getenv("ENVIRONMENT", "test")  # se não existir, fallback = "test"
+ENVIRONMENT = os.getenv("ENVIRONMENT", "test")  # prod para produção e test para teste
 
 if ENVIRONMENT == "prod":
     API_TOKEN = os.getenv("PROD_API_TOKEN")
