@@ -43,7 +43,12 @@ def inserir_cliente(
     """
     Função para inserir um cliente via IXC API.
     Cada parâmetro do payload é opcional.
+    Se tipo_pessoa vier None, determinamos automaticamente (F ou J) de acordo com o len(cnpj_cpf).
     """
+
+    # **Converter cnpj_cpf para string**
+    cnpj_cpf = str(cnpj_cpf)
+    
     # Se não foi passado explicitamente, decidimos aqui
     if not tipo_pessoa:
         if len(cnpj_cpf) == 11:
