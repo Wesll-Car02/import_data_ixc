@@ -47,14 +47,14 @@ def inserir_cliente(
     """
 
     # **Converter cnpj_cpf para string**
-    cnpj_cpf = str(cnpj_cpf)
+    # cnpj_cpf = str(cnpj_cpf)
     
     # Se não foi passado explicitamente, decidimos aqui
-    if not tipo_pessoa:
-        if len(cnpj_cpf) == 11:
-            tipo_pessoa = "F"
-        else:
-            tipo_pessoa = "J"
+    # if not tipo_pessoa:
+    #     if len(cnpj_cpf) == 11:
+    #         tipo_pessoa = "F"
+    #     else:
+    #         tipo_pessoa = "J"
 
     host = BASE_URL
     url = f"{host}/webservice/v1/cliente"
