@@ -16,6 +16,7 @@ def inserir_contrato(
     id_cliente="",
     id_vd_contrato="", # Plano do contrato
     id_tipo_contrato="", # Id tipo de de cobrança
+    id_tipo_documento="501",
     id_modelo="179", # Id modelo do contrato
     id_filial="",
     id_vendedor="1", #Vendedor padrão
@@ -27,7 +28,8 @@ def inserir_contrato(
     aviso_atraso="N",
     id_carteira_cobranca="",
     cc_previsao="P",
-    base_geracao_tipo_doc=""
+    base_geracao_tipo_doc="P",
+    cep=""
 ):
     """
     Função para inserir um contrato via IXC API.
@@ -47,6 +49,7 @@ def inserir_contrato(
         "id_cliente": id_cliente,
         "id_vd_contrato": id_vd_contrato,
         "id_tipo_contrato": id_tipo_contrato,
+        "id_tipo_documento": id_tipo_documento ,
         "id_modelo": id_modelo,
         "id_filial": id_filial,
         "id_vendedor": id_vendedor,
@@ -58,7 +61,8 @@ def inserir_contrato(
         "aviso_atraso": aviso_atraso,
         "id_carteira_cobranca": id_carteira_cobranca,
         "cc_previsao": cc_previsao,
-        "base_geracao_tipo_doc": base_geracao_tipo_doc
+        "base_geracao_tipo_doc": base_geracao_tipo_doc,
+        "cep":cep
     }
 
     headers = {
