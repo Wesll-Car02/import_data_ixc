@@ -26,7 +26,7 @@ def inserir_contrato(
     """
 
     host = BASE_URL
-    url = f"{host}/webservice/v1/cliente"
+    url = f"{host}/webservice/v1/cliente_contrato"
 
     # Gerando o token em Base64
     token = f"{API_TOKEN}".encode("utf-8")
