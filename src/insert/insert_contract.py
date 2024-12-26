@@ -19,9 +19,15 @@ def inserir_contrato(
     id_modelo="179", # Id modelo do contrato
     id_filial="",
     id_vendedor="1", #Vendedor padrão
-    data_base_financeiro="",          
+    data_base_financeira="",          
     bloqueio_automatico="N",
-    isentar_contrato = "S", 
+    contrato="",
+    tipo_cobranca="P",
+    renovacao_automatica="N",
+    aviso_atraso="N",
+    id_carteira_cobranca="",
+    cc_previsao="P",
+    base_geracao_tipo_doc=""
 ):
     """
     Função para inserir um contrato via IXC API.
@@ -44,9 +50,15 @@ def inserir_contrato(
         "id_modelo": id_modelo,
         "id_filial": id_filial,
         "id_vendedor": id_vendedor,
-        "data_base_financeiro": data_base_financeiro,
+        "data": data_base_financeira,
         "bloqueio_automatico": bloqueio_automatico,
-        "isentar_contrato": isentar_contrato
+        "contrato": contrato,
+        "tipo_cobranca": tipo_cobranca,
+        "renovacao_automatica": renovacao_automatica,
+        "aviso_atraso": aviso_atraso,
+        "id_carteira_cobranca": id_carteira_cobranca,
+        "cc_previsao": cc_previsao,
+        "base_geracao_tipo_doc": base_geracao_tipo_doc
     }
 
     headers = {
