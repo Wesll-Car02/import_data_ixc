@@ -55,6 +55,10 @@ def inserir_cliente(
             tipo_pessoa = "F"
         else:
             tipo_pessoa = "J"
+    
+    # Tipo de assinante
+    if tipo_pessoa == "J": # Por padrão é pessoa F
+        tipo_assinante = "1" # Comercial/Industrial
 
     host = BASE_URL
     url = f"{host}/webservice/v1/cliente"

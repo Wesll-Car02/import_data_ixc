@@ -20,19 +20,20 @@ Before running the code, you need to set the following environment variables:
 
 ### Example
 
-To set the environment variables using the command line (CMD):
+To set the environment variables using the Power Shell:
 
-```cmd
+```powershell
 # Set environment
-set ENVIRONMENT=test   # or prod
+
+[System.Environment]::SetEnvironmentVariable("ENVIRONMENT", "test", "User") # or prod
 
 # For testing
-set TEST_API_TOKEN=your_test_api_token
-set TEST_BASE_URL=https://test-api.example.com
+[System.Environment]::SetEnvironmentVariable("TEST_API_TOKEN", "your_token", "User")
+[System.Environment]::SetEnvironmentVariable("TEST_BASE_URL", "https://teste.com.br", "User")
 
 # For production
-set PROD_API_TOKEN=your_prod_api_token
-set PROD_BASE_URL=https://prod-api.example.com
+[System.Environment]::SetEnvironmentVariable("PROD_API_TOKEN", "your_token", "User")
+[System.Environment]::SetEnvironmentVariable("PROD_BASE_URL", "https://prod.com.br", "User")
 ```
 
 Ensure these variables are defined in your environment before running the code.
