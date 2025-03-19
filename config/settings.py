@@ -11,5 +11,5 @@ else:
 
 # Para debug
 print(f"Ambiente: {ENVIRONMENT}")
-# print(f"API_TOKEN: {API_TOKEN}")
-# print(f"BASE_URL: {BASE_URL}")
+print(f"API_TOKEN: {API_TOKEN}")
+print(f"BASE_URL: {BASE_URL}")

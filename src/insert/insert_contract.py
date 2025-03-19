@@ -29,7 +29,12 @@ def inserir_contrato(
     id_carteira_cobranca="",
     cc_previsao="P",
     base_geracao_tipo_doc="P",
-    cep=""
+    cep="",
+    endereco="",
+    numero="",
+    complemento="",
+    bairro="",
+    cidade="",
 ):
     """
     Função para inserir um contrato via IXC API.
@@ -62,7 +67,12 @@ def inserir_contrato(
         "id_carteira_cobranca": id_carteira_cobranca,
         "cc_previsao": cc_previsao,
         "base_geracao_tipo_doc": base_geracao_tipo_doc,
-        "cep":cep
+        "cep":cep,
+        "endereco":endereco,
+        "numero": numero,
+        "complemento": complemento,
+        "bairro": bairro,
+        "cidade": cidade,
     }
 
     headers = {
