@@ -14,8 +14,8 @@ else:
 
 # Para debug
 print(f"Ambiente: {ENVIRONMENT}")
-print(f"API_TOKEN: {API_TOKEN}")
-print(f"BASE_URL: {BASE_URL}")
-print(f"BANCO_URL: {BANCO_URL}")
-print(f"USER_BANCO: {USER_BANCO}")
-print(f"PASS_BANCO: {PASS_BANCO}")
+# print(f"API_TOKEN: {API_TOKEN}")
+# print(f"BASE_URL: {BASE_URL}")
+# print(f"BANCO_URL: {BANCO_URL}")
+# print(f"USER_BANCO: {USER_BANCO}")
+# print(f"PASS_BANCO: {PASS_BANCO}")
