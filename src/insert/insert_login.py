@@ -27,7 +27,13 @@ def inserir_radusuarios(
     autenticacao_por_mac="N",
     auto_preencher_mac="S",
     relacionar_mac_ao_login="S",
-    tipo_vinculo_plano="D"
+    tipo_vinculo_plano="D",
+    cep="",
+    endereco="",
+    numero="",
+    complemento="",
+    bairro="",
+    cidade="",
 ):
     """
     Função para inserir um usuário via IXC API na rota /webservice/v1/radusuarios.
@@ -58,7 +64,13 @@ def inserir_radusuarios(
         "autenticacao_por_mac": autenticacao_por_mac,
         "auto_preencher_mac": auto_preencher_mac,
         "relacionar_mac_ao_login": relacionar_mac_ao_login,
-        "tipo_vinculo_plano": tipo_vinculo_plano
+        "tipo_vinculo_plano": tipo_vinculo_plano,
+        "cep":cep,
+        "endereco":endereco,
+        "numero": numero,
+        "complemento": complemento,
+        "bairro": bairro,
+        "cidade": cidade,
     }
 
     headers = {
