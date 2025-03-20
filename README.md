@@ -31,6 +31,10 @@ To set the environment variables using the Power Shell:
 [System.Environment]::SetEnvironmentVariable("TEST_API_TOKEN", "your_token", "User")
 [System.Environment]::SetEnvironmentVariable("TEST_BASE_URL", "https://teste.com.br", "User")
 
+[System.Environment]::SetEnvironmentVariable("TEST_BANCO_URL", "your_url", "User")
+[System.Environment]::SetEnvironmentVariable("TEST_USER_BANCO", "your_user_base", "User")
+[System.Environment]::SetEnvironmentVariable("TEST_PASS_BANCO", "your_pass_base", "User")
+
 # For production
 [System.Environment]::SetEnvironmentVariable("PROD_API_TOKEN", "your_token", "User")
 [System.Environment]::SetEnvironmentVariable("PROD_BASE_URL", "https://prod.com.br", "User")
