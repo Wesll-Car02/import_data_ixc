@@ -39,6 +39,7 @@ def inserir_cliente(
     tipo_assinante="3",
     iss_classificacao_padrao="99",
     tipo_localidade="U",
+    idx=""
 ):
     """
     Função para inserir um cliente via IXC API.
@@ -96,6 +97,7 @@ def inserir_cliente(
         "tipo_assinante": tipo_assinante,
         "iss_classificacao_padrao": iss_classificacao_padrao,
         "tipo_localidade": tipo_localidade,
+        "idx":idx
     }
 
     headers = {
